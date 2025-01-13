@@ -10,11 +10,3 @@ if prompt:
 
 
 
-st.header("Settings")
-st.write(f"You are logged in as {st.session_state.role}.")
-
-st.header("Admin 1")
-st.write(f"You are logged in as {st.session_state.role}.")
-
-st.header("Admin 2")
-st.write(f"You are logged in as {st.session_state.role}.")
