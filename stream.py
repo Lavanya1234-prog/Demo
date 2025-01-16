@@ -24,7 +24,7 @@ if prompt:
 def main():
 
     # Sidebar for use case selection
-    use_case = st.sidebar.selectbox("Select Use Case", ["Text Conversation"]
+    use_case = st.sidebar.selectbox("Select Use Case", ["Text Conversation"])
                                                         
 def text_conversation():
     st.header("Text Conversation")
