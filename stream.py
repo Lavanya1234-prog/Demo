@@ -1,7 +1,17 @@
 import streamlit as st
-import numpy as np
-import time
-import streamlit as st
+import google.generativeai as genai
+from PIL import Image
+import io
+from pathlib import Path
+# from IPython.display import Markdown
+import os
+import tempfile
+from dotenv import load_dotenv
+
+load_dotenv()
+os.getenv("GOOGLE_API_KEY")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
 
 st.header("This is my first streamlit App LETS ENJOY :blue[cool] :sunglasses:")
 
@@ -11,7 +21,11 @@ prompt = st.chat_input("Say something")
 if prompt:
     st.write(f"User has sent the following prompt: {prompt}")
 
+def main():
 
+    # Sidebar for use case selection
+    use_case = st.sidebar.selectbox("Select Use Case", ["Text Conversation"]
+                                                        
 def text_conversation():
     st.header("Text Conversation")
     
@@ -28,6 +42,7 @@ def text_conversation():
         response = chat.send_message(user_input)
         st.write("Model:", response.text)
 
-
+if __name__ == "__main__":
+    main()
 
 
